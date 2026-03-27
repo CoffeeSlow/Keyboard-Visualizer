@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "GH06Ou+yih4=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Bruhs\\USB checker\\UsbChecker\\UsbChecker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bruhs\\.nuget\\packages\\system.codedom\\10.0.5\\system.codedom.10.0.5.nupkg.sha512",
+    "C:\\Users\\Bruhs\\.nuget\\packages\\system.management\\10.0.5\\system.management.10.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
