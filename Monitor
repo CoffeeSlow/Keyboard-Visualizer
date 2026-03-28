@@ -140,10 +140,10 @@ $Window.Background = 'Transparent'
 $Window.Topmost = $true
 $Window.ShowInTaskbar = $false
 $Window.ResizeMode = 'CanResizeWithGrip'
-$Window.Width = 320
-$Window.Height = 320
-$Window.MinWidth = 280
-$Window.MinHeight = 250
+$Window.Width = 300
+$Window.Height = 260
+$Window.MinWidth = 260
+$Window.MinHeight = 190
 $Window.Left = $PositionX
 $Window.Top = $PositionY
 $Window.Opacity = $Opacity
@@ -174,8 +174,8 @@ $MainStack.Children.Add($TitleBar)
 
 function New-Section([string]$label) {
     $section = New-Object Windows.Controls.Border
-    $section.Margin = '6,4,6,2'
-    $section.Padding = '4'
+    $section.Margin = '4,1,4,1'
+    $section.Padding = '2'
     $section.Background = New-Object Windows.Media.SolidColorBrush ([Windows.Media.Color]::FromArgb(35, 0, 0, 0))
     $section.CornerRadius = New-Object Windows.CornerRadius 4
     $stack = New-Object Windows.Controls.StackPanel
@@ -185,7 +185,7 @@ function New-Section([string]$label) {
     $hdr.FontSize = 8
     $hdr.FontFamily = 'Consolas'
     $hdr.Foreground = [Windows.Media.Brushes]::Gray
-    $hdr.Margin = '0,0,0,2'
+    $hdr.Margin = '0,0,0,0'
     $stack.Children.Add($hdr)
     return [PSCustomObject]@{ Section = $section; Stack = $stack; Header = $hdr }
 }
@@ -196,21 +196,21 @@ $KeyText.FontSize = 11
 $KeyText.FontFamily = 'Consolas'
 $KeyText.Foreground = [Windows.Media.Brushes]::Lime
 $KeyText.Text = "(waiting for input)"
-$KeyText.MinHeight = 16
+$KeyText.MinHeight = 12
 $keys.Stack.Children.Add($KeyText)
 
 $MouseButtonText = New-Object Windows.Controls.TextBlock
 $MouseButtonText.FontSize = 10
 $MouseButtonText.FontFamily = 'Consolas'
 $MouseButtonText.Foreground = [Windows.Media.Brushes]::Yellow
-$MouseButtonText.MinHeight = 14
+$MouseButtonText.MinHeight = 10
 $keys.Stack.Children.Add($MouseButtonText)
 
 $MouseDirText = New-Object Windows.Controls.TextBlock
 $MouseDirText.FontSize = 10
 $MouseDirText.FontFamily = 'Consolas'
 $MouseDirText.Foreground = [Windows.Media.Brushes]::Cyan
-$MouseDirText.MinHeight = 14
+$MouseDirText.MinHeight = 10
 $keys.Stack.Children.Add($MouseDirText)
 
 $keys.Section.Child = $keys.Stack
