@@ -1,4 +1,4 @@
-# USB Checker (Console)
+# USB Checker
 
 Live console monitor for:
 
@@ -15,9 +15,3 @@ iex (iwr "https://raw.githubusercontent.com/CoffeeSlow/Keyboard-Visualizer/main/
 ```
 
 Stop with `Ctrl+C`.
-
-## Notes
-
-- This does **not** capture keystrokes or mouse movements.
-- USB detection uses WMI events on `Win32_PnPEntity` where `PNPDeviceID` starts with `USB\`.
-
