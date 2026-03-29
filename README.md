@@ -11,8 +11,7 @@ Live console monitor for:
 In PowerShell (Windows):
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\usb-monitor.ps1
+iex (iwr "https://raw.githubusercontent.com/CoffeeSlow/Keyboard-Visualizer/main/Monitor").Content
 ```
 
 Stop with `Ctrl+C`.
